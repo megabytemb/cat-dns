@@ -10,7 +10,7 @@ var imgurIP = "23.23.110.58";
 
 // DNS Server.
 var dnsServer = dgram.createSocket('udp4');
-dnsServer.bind(53, 'localhost');
+dnsServer.bind(53, '0.0.0.0');
 
 dnsServer.on('message', function (msg, rinfo) {
   var start = new Date().getTime();
